@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БЕЗЛИМИТ.PRO — Подключение эксклюзивных непубличных тарифов со скидкой до 70%</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Unbounded for impactful headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Unbounded', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            950: '#05070B',
+                            900: '#0A0D14',
+                            800: '#121723',
+                            700: '#1C2436',
+                        },
+                        crimson: {
+                            500: '#FF1E42',
+                            600: '#E01133',
+                        },
+                        neon: {
+                            400: '#00F0FF',
+                            500: '#0099FF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #05070B;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        /* Ambient background glows */
+        .bg-glow-crimson {
+            background: radial-gradient(circle, rgba(255, 30, 66, 0.22) 0%, rgba(255, 30, 66, 0) 70%);
+        }
+        .bg-glow-neon {
+            background: radial-gradient(circle, rgba(0, 153, 255, 0.20) 0%, rgba(0, 240, 255, 0) 70%);
+        }
+
+        /* Glossy 3D Glass Card Effects */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(24, 31, 48, 0.78) 0%, rgba(12, 16, 26, 0.92) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 30, 66, 0.45);
+            box-shadow: 0 25px 60px -12px rgba(255, 30, 66, 0.22), 0 0 25px rgba(0, 153, 255, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Featured Card Highlight */
+        .glass-card-featured {
+            background: linear-gradient(145deg, rgba(35, 20, 38, 0.85) 0%, rgba(14, 19, 32, 0.95) 100%);
+            border: 1px solid rgba(255, 30, 66, 0.5);
+            box-shadow: 0 20px 50px rgba(255, 30, 66, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+        }
+
+        /* 3D Floating SIM Visual Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-12px) rotate(1deg); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.06); }
+        }
+        .animate-pulse-glow {
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            background: linear-gradient(90deg, #FF1E42 0%, #0099FF 100%);
+            height: 8px;
+            border-radius: 999px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -8px;
+            background-color: #ffffff;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            border: 4px solid #FF1E42;
+            box-shadow: 0 0 15px rgba(255, 30, 66, 0.8);
+            transition: transform 0.15s ease;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        /* Gradient Buttons */
+        .btn-crimson {
+            background: linear-gradient(135deg, #FF1E42 0%, #FF4B2B 100%);
+            box-shadow: 0 10px 25px -5px rgba(255, 30, 66, 0.55);
+            transition: all 0.25s ease;
+        }
+        .btn-crimson:hover {
+            box-shadow: 0 15px 30px -3px rgba(255, 30, 66, 0.75);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.45);
+            transition: all 0.25s ease;
+        }
+        .btn-whatsapp:hover {
+            box-shadow: 0 15px 30px -3px rgba(16, 185, 129, 0.65);
+            transform: translateY(-2px);
+        }
+
+        /* Subtle grid pattern overlay */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-grid-pattern selection:bg-crimson-500 selection:text-white">
+
+    <!-- ==================== 2. OWNER QUICK CONFIG BAR ==================== -->
+    <div id="owner-config-wrapper" class="fixed top-20 left-4 z-50">
+        <!-- Toggle Button -->
+        <button onclick="toggleOwnerPanel()" class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-dark-800/95 border border-neon-400/40 text-xs font-medium text-slate-200 shadow-lg hover:border-neon-400 transition-all group">
+            <span class="w-2 h-2 rounded-full bg-neon-400 animate-ping"></span>
+            <i class="fa-solid fa-gear text-neon-400 group-hover:rotate-90 transition-transform duration-300"></i>
+            <span>⚙️ Настроить контакты под себя</span>
+        </button>
+
+        <!-- Expandable Settings Card -->
+        <div id="owner-config-panel" class="hidden mt-2 w-80 sm:w-96 p-5 rounded-2xl bg-dark-900/98 backdrop-blur-xl border border-neon-400/40 shadow-2xl">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-neon-400"></i>
+                    <h4 class="font-bold text-sm text-white">Панель владельца сайта</h4>
+                </div>
+                <button onclick="toggleOwnerPanel()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                Укажите ваш номер WhatsApp и Telegram. Все кнопки и калькулятор на сайте мгновенно начнут отправлять готовые заявки с выбранным тарифом вам в личные сообщения.
+            </p>
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-xs text-slate-300 font-medium mb-1">Номер WhatsApp (только цифры, с 7):</label>
+                    <div class="relative">
+                        <i class="fa-brands fa-whatsapp absolute left-3.5 top-3 text-emerald-400"></i>
+                        <input id="owner-wa-input" type="text" value="79990000000" placeholder="79991234567" 
+                            class="w-full pl-9 pr-3 py-2 rounded-xl bg-dark-800 border border-white/10 text-sm text-white focus:outline-none focus:border-neon-400">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-medium mb-1">Ваш ник в Telegram (без @):</label>
+                    <div class="relative">
+                        <i class="fa-brands fa-telegram absolute left-3.5 top-3 text-sky-400"></i>
+                        <input id="owner-tg-input" type="text" value="bezlimit_pro_support" placeholder="username" 
+                            class="w-full pl-9 pr-3 py-2 rounded-xl bg-dark-800 border border-white/10 text-sm text-white focus:outline-none focus:border-neon-400">
+                    </div>
+                </div>
+                <div class="pt-2 flex gap-2">
+                    <button onclick="saveOwnerConfig()" class="flex-1 py-2.5 px-4 rounded-xl btn-crimson text-xs font-bold text-white flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Применить ко всем кнопкам
+                    </button>
+                </div>
+                <p id="owner-save-status" class="hidden text-xs text-emerald-400 text-center font-medium pt-1">
+                    ✓ Контакты обновлены! Проверьте любую кнопку на сайте.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 1. HEADER ==================== -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-dark-950/85 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-crimson-500 to-neon-500 flex items-center justify-center shadow-lg shadow-crimson-500/30 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-infinity text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white">БЕЗЛИМИТ<span class="text-crimson-500">.PRO</span></span>
+                    <span class="block text-[10px] text-slate-400 -mt-1 tracking-wider uppercase">Закрытые тарифы связи</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+                <a href="#tariffs" class="hover:text-white transition-colors">Тарифы</a>
+                <a href="#calculator" class="hover:text-white transition-colors">Калькулятор выгоды</a>
+                <a href="#steps" class="hover:text-white transition-colors">Как подключить</a>
+                <a href="#guarantees" class="hover:text-white transition-colors">Гарантии и отзывы</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5">
+                <a href="#" onclick="openTelegramGeneral(event)" class="hidden sm:flex items-center justify-center w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/30 text-sky-400 hover:bg-sky-500 hover:text-white transition-all" title="Написать в Telegram">
+                    <i class="fa-brands fa-telegram text-lg"></i>
+                </a>
+                <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу подобрать непубличный безлимитный тариф.')" class="btn-whatsapp px-4 sm:px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-white flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i>
+                    <span>Написать в WhatsApp</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-dark-800 border border-white/10 text-slate-200">
+                    <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-900/98 border-b border-white/10 px-4 pt-3 pb-6 space-y-3">
+            <a href="#tariffs" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-slate-200 font-medium">🔥 Каталог тарифов</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-slate-200 font-medium">🧮 Калькулятор выгоды</a>
+            <a href="#steps" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-slate-200 font-medium">⚡ Как подключить</a>
+            <a href="#guarantees" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-slate-200 font-medium">🛡️ Гарантии и отзывы</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 px-3 rounded-lg hover:bg-white/5 text-slate-200 font-medium">❓ Частые вопросы (FAQ)</a>
+            <div class="pt-2 flex gap-2">
+                <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу подобрать выгодный безлимитный тариф.')" class="flex-1 py-3 rounded-xl btn-whatsapp text-center font-bold text-sm text-white flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="#" onclick="openTelegramGeneral(event)" class="flex-1 py-3 rounded-xl bg-sky-500 text-center font-bold text-sm text-white flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 3. HERO SECTION ==================== -->
+    <section class="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden">
+        <!-- Ambient Background Glows -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-glow-crimson rounded-full pointer-events-none blur-3xl"></div>
+        <div class="absolute top-1/3 -right-24 w-96 h-96 bg-glow-neon rounded-full pointer-events-none blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+                
+                <!-- Left Column: Copy & CTAs -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Top Promo Pill -->
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-crimson-500/10 border border-crimson-500/30 text-crimson-500 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-crimson-500 animate-ping"></span>
+                        <span>Эксклюзивный доступ к закрытым тарифам 2026</span>
+                    </div>
+
+                    <!-- Main Title -->
+                    <h1 class="font-display font-bold text-2xl sm:text-4xl lg:text-[42px] leading-[1.18] tracking-tight text-white">
+                        Подключим настоящий <span class="text-transparent bg-clip-text bg-gradient-to-r from-crimson-500 via-rose-400 to-neon-400">безлимитный интернет</span> и пакеты минут на ваш номер со скидкой до 70%
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Закрытые корпоративные и непубличные тарифы официальных операторов РФ. <strong class="text-white font-semibold">Без смены вашего номера</strong>, с бесплатной раздачей Wi-Fi без ограничений скорости и отображением в официальном приложении оператора.
+                    </p>
+
+                    <!-- Feature Badges Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                        <div class="glass-card p-3 rounded-2xl flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-crimson-500/20 border border-crimson-500/40 flex items-center justify-center shrink-0 text-crimson-500">
+                                <i class="fa-solid fa-infinity"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white leading-tight">Безлимитный трафик</span>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-neon-500/20 border border-neon-400/40 flex items-center justify-center shrink-0 text-neon-400">
+                                <i class="fa-solid fa-wifi"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white leading-tight">Раздача без ограничений</span>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center shrink-0 text-amber-400">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white leading-tight">Подключение за 15–30 мин</span>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center shrink-0 text-emerald-400">
+                                <i class="fa-solid fa-shield-check"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-semibold text-white leading-tight">100% официально</span>
+                        </div>
+                    </div>
+
+                    <!-- Primary CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+                        <a href="#tariffs" class="btn-crimson px-7 py-4 rounded-2xl font-display font-bold text-sm sm:text-base text-white text-center flex items-center justify-center gap-3">
+                            <span>Подобрать тариф</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                        <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу получить бесплатную консультацию и подобрать непубличный тариф на свой номер.')" class="glass-card px-7 py-4 rounded-2xl font-semibold text-sm sm:text-base text-white hover:border-emerald-400/60 text-center flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                            <span>Консультация в WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust micro-bar -->
+                    <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Оплата после проверки условий</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-sim-card text-neon-400"></i>
+                            <span>На свой номер или новая SIM / eSIM</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-globe text-crimson-500"></i>
+                            <span>Работает по всей России</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Glossy 3D Card & App Status Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md animate-float">
+                        <!-- Back Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-crimson-500/30 via-purple-600/20 to-neon-400/30 rounded-3xl blur-2xl animate-pulse-glow"></div>
+
+                        <!-- Main 3D Glass Mockup Card -->
+                        <div class="relative glass-card-featured rounded-3xl p-6 sm:p-7 border border-white/15 overflow-hidden">
+                            <!-- Glossy reflection stripe -->
+                            <div class="absolute -top-24 -right-24 w-52 h-52 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+
+                            <!-- Card Header: SIM Chip + Status -->
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center gap-3">
+                                    <!-- Golden 3D SIM Chip SVG -->
+                                    <div class="w-12 h-9 rounded-lg bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-600 p-1 shadow-inner flex items-center justify-center border border-amber-200/50">
+                                        <div class="w-full h-full border border-amber-900/40 rounded grid grid-cols-3 gap-0.5 p-0.5">
+                                            <div class="bg-amber-900/20 rounded-sm"></div>
+                                            <div class="bg-amber-900/20 rounded-sm"></div>
+                                            <div class="bg-amber-900/20 rounded-sm"></div>
+                                            <div class="bg-amber-900/20 rounded-sm col-span-3"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-[11px] uppercase tracking-wider text-neon-400 font-bold block">Корпоративный VIP-профиль</span>
+                                        <span class="text-sm font-bold text-white">Личный кабинет оператора</span>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Активен
+                                </span>
+                            </div>
+
+                            <!-- Tariff Comparison Inside 3D Card -->
+                            <div class="p-4 rounded-2xl bg-dark-950/80 border border-white/10 mb-5 space-y-3">
+                                <div class="flex justify-between items-center border-b border-white/10 pb-3">
+                                    <div>
+                                        <span class="text-xs text-slate-400 block">Подключенный тариф</span>
+                                        <span class="font-display font-bold text-base text-white">БЕЗЛИМИТ УЛЬТРА PRO</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-xs text-slate-500 line-through block">1 150 ₽/мес</span>
+                                        <span class="font-display font-bold text-lg text-neon-400">290 ₽<span class="text-xs font-normal text-slate-300">/мес</span></span>
+                                    </div>
+                                </div>
+
+                                <!-- Meters -->
+                                <div class="grid grid-cols-3 gap-2 pt-1 text-center">
+                                    <div class="p-2.5 rounded-xl bg-white/5">
+                                        <span class="text-xs text-slate-400 block">Интернет</span>
+                                        <span class="font-display font-bold text-base sm:text-lg text-crimson-500">∞ ГБ</span>
+                                        <span class="text-[10px] text-emerald-400 block">Без капов</span>
+                                    </div>
+                                    <div class="p-2.5 rounded-xl bg-white/5">
+                                        <span class="text-xs text-slate-400 block">Звонки РФ</span>
+                                        <span class="font-display font-bold text-base sm:text-lg text-white">1500</span>
+                                        <span class="text-[10px] text-slate-400 block">минут/мес</span>
+                                    </div>
+                                    <div class="p-2.5 rounded-xl bg-white/5">
+                                        <span class="text-xs text-slate-400 block">Раздача</span>
+                                        <span class="font-display font-bold text-base sm:text-lg text-neon-400">0 ₽</span>
+                                        <span class="text-[10px] text-emerald-400 block">Торренты ОК</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Supported Connection Formats -->
+                            <div class="space-y-2.5 text-xs sm:text-sm text-slate-200">
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
+                                    <span class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen-button text-crimson-500"></i> Перевод своего номера</span>
+                                    <span class="font-bold text-white">15–30 минут</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/5">
+                                    <span class="flex items-center gap-2"><i class="fa-solid fa-qrcode text-neon-400"></i> Оформление QR-кода eSIM</span>
+                                    <span class="font-bold text-emerald-400">Моментально</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. INTERACTIVE TARIFF CATALOG ==================== -->
+    <section id="tariffs" class="py-16 sm:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+                <span class="px-3.5 py-1 rounded-full bg-neon-500/10 border border-neon-400/30 text-neon-400 text-xs font-bold uppercase tracking-wider">
+                    Каталог закрытых тарифов
+                </span>
+                <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                    Выберите свой идеальный безлимит
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Все тарифы закрепляются за вашим паспортом и отображаются в официальном приложении оператора (МегаФон, МТС, Билайн, T2).
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="tariff-filters">
+                <button onclick="filterTariffs('all')" data-filter="all" class="filter-btn active-filter px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-gradient-to-r from-crimson-500 to-rose-600 text-white shadow-lg shadow-crimson-500/30">
+                    Все тарифы (6)
+                </button>
+                <button onclick="filterTariffs('smartphone')" data-filter="smartphone" class="filter-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dark-800 border border-white/10 text-slate-300 hover:text-white hover:border-white/30">
+                    🔥 Хит для смартфона
+                </button>
+                <button onclick="filterTariffs('modem')" data-filter="modem" class="filter-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dark-800 border border-white/10 text-slate-300 hover:text-white hover:border-white/30">
+                    📡 Для модема и роутера
+                </button>
+                <button onclick="filterTariffs('max')" data-filter="max" class="filter-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dark-800 border border-white/10 text-slate-300 hover:text-white hover:border-white/30">
+                    👑 Максимум минут + Безлимит
+                </button>
+            </div>
+
+            <!-- Tariffs Grid (Populated dynamically via JS) -->
+            <div id="tariffs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- JS injects cards here -->
+            </div>
+
+            <!-- Custom Selection Help Banner -->
+            <div class="mt-12 glass-card rounded-3xl p-6 sm:p-8 border border-neon-400/30 flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 text-neon-400 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Индивидуальный подбор по номеру
+                    </div>
+                    <h3 class="font-display font-bold text-lg sm:text-2xl text-white">
+                        Не знаете, какой тариф подойдет на ваш текущий номер?
+                    </h3>
+                    <p class="text-slate-300 text-sm max-w-2xl">
+                        Напишите нам в WhatsApp ваш оператор и регион — за 2 минуты пришлем список закрытых тарифов, доступных именно для вашего номера.
+                    </p>
+                </div>
+                <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Помогите подобрать лучший непубличный тариф под мой действующий номер.')" class="btn-whatsapp px-7 py-4 rounded-2xl font-display font-bold text-sm text-white shrink-0 flex items-center gap-2.5">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Подобрать в WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. INTERACTIVE SAVINGS CALCULATOR ==================== -->
+    <section id="calculator" class="py-16 sm:py-24 relative bg-dark-900/60 border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="px-3.5 py-1 rounded-full bg-crimson-500/10 border border-crimson-500/30 text-crimson-500 text-xs font-bold uppercase tracking-wider">
+                    Калькулятор выгоды
+                </span>
+                <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                    Посчитайте, сколько вы переплачиваете оператору
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Обычные публичные тарифы дорожают каждый год, а безлимит из них давно убрали. Посмотрите реальную экономию при переходе на закрытый тариф со средней абонплатой <strong class="text-white">290 ₽/мес</strong>.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left Controls -->
+                <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-8">
+                    
+                    <!-- Slider 1: Current monthly spend -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <label for="calc-spend" class="text-sm sm:text-base font-semibold text-slate-200">
+                                Сколько вы сейчас платите за связь в месяц (за 1 номер)?
+                            </label>
+                            <div class="px-4 py-1.5 rounded-xl bg-crimson-500/15 border border-crimson-500/40 font-display font-bold text-lg sm:text-xl text-crimson-500 shrink-0">
+                                <span id="calc-spend-val">950</span> ₽
+                            </div>
+                        </div>
+                        <input id="calc-spend" type="range" min="450" max="2500" step="50" value="950" oninput="updateCalculator()" class="w-full">
+                        <div class="flex justify-between text-xs text-slate-500">
+                            <span>450 ₽/мес</span>
+                            <span>1 200 ₽/мес</span>
+                            <span>2 500 ₽/мес</span>
+                        </div>
+                    </div>
+
+                    <!-- Selector 2: Family / Number of SIMs -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <label class="text-sm sm:text-base font-semibold text-slate-200">
+                                Количество номеров в семье (+ роутер / планшет):
+                            </label>
+                            <span id="calc-sims-label" class="text-xs font-bold text-neon-400 uppercase tracking-wider">2 номера</span>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2.5" id="sim-count-buttons">
+                            <button onclick="setSimCount(1)" data-sim="1" class="sim-btn py-3 rounded-xl font-display font-bold text-sm bg-dark-800 border border-white/10 text-slate-300 hover:border-white/30 transition-all">1</button>
+                            <button onclick="setSimCount(2)" data-sim="2" class="sim-btn py-3 rounded-xl font-display font-bold text-sm bg-gradient-to-r from-crimson-500 to-rose-600 text-white border border-crimson-500 shadow-lg shadow-crimson-500/30 transition-all">2</button>
+                            <button onclick="setSimCount(3)" data-sim="3" class="sim-btn py-3 rounded-xl font-display font-bold text-sm bg-dark-800 border border-white/10 text-slate-300 hover:border-white/30 transition-all">3</button>
+                            <button onclick="setSimCount(4)" data-sim="4" class="sim-btn py-3 rounded-xl font-display font-bold text-sm bg-dark-800 border border-white/10 text-slate-300 hover:border-white/30 transition-all">4</button>
+                            <button onclick="setSimCount(5)" data-sim="5" class="sim-btn py-3 rounded-xl font-display font-bold text-sm bg-dark-800 border border-white/10 text-slate-300 hover:border-white/30 transition-all">5</button>
+                        </div>
+                    </div>
+
+                    <!-- Included Perks Reminder -->
+                    <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 flex items-center gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-neon-500/15 border border-neon-400/30 flex items-center justify-center text-neon-400 shrink-0 text-lg">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            При подключении от <strong class="text-white">2 номеров</strong> (например, себе и супруге или в роутер) мы делаем <strong class="text-neon-400">скидку 20% на подключение</strong>!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Results Card -->
+                <div class="lg:col-span-5 glass-card-featured rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs uppercase tracking-wider font-bold text-slate-400">Ваша чистая выгода</span>
+                            <span class="px-2.5 py-1 rounded-full bg-crimson-500/20 text-crimson-500 text-xs font-bold">Тариф 290 ₽/мес</span>
+                        </div>
+
+                        <!-- 1 Year Savings -->
+                        <div class="p-5 rounded-2xl bg-dark-950/85 border border-white/10">
+                            <span class="text-xs text-slate-400 block mb-1">Экономия бюджета за 1 год:</span>
+                            <div class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                                <span id="calc-save-1y">15 840</span> ₽
+                            </div>
+                            <span class="text-xs text-emerald-400 mt-1 block">
+                                <i class="fa-solid fa-arrow-trend-down"></i> Платите <span id="calc-new-month">580</span> ₽/мес вместо <span id="calc-old-month">1 900</span> ₽/мес
+                            </span>
+                        </div>
+
+                        <!-- 3 Years Savings -->
+                        <div class="p-5 rounded-2xl bg-gradient-to-r from-crimson-500/20 to-neon-500/20 border border-neon-400/40">
+                            <span class="text-xs text-neon-400 font-semibold block mb-1">Экономия за 3 года:</span>
+                            <div class="font-display font-extrabold text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-white via-neon-400 to-emerald-300">
+                                <span id="calc-save-3y">47 520</span> ₽
+                            </div>
+                            <span class="text-xs text-slate-300 mt-1 block">
+                                + Полный безлимитный интернет вместо ограничений по ГБ
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 relative z-10">
+                        <button onclick="sendCalcToWhatsApp()" class="w-full py-4 px-6 rounded-2xl btn-crimson font-display font-bold text-sm sm:text-base text-white flex items-center justify-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Зафиксировать выгоду</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. HOW CONNECTION WORKS (4 STEPS) ==================== -->
+    <section id="steps" class="py-16 sm:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+                <span class="px-3.5 py-1 rounded-full bg-neon-500/10 border border-neon-400/30 text-neon-400 text-xs font-bold uppercase tracking-wider">
+                    Прозрачный процесс
+                </span>
+                <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                    Как происходит подключение за 4 простых шага
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Никуда ехать не нужно — подключение проходит полностью дистанционно. Ваша SIM-карта продолжает работать без перерывов связи.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="glass-card rounded-3xl p-6 relative group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-crimson-500/15 border border-crimson-500/30 flex items-center justify-center text-crimson-500 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-3xl text-white/10 group-hover:text-crimson-500/40 transition-colors">01</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Оставляете заявку</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Пишете нам в WhatsApp, Telegram или оставляете заявку на сайте с выбранным тарифом.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-card rounded-3xl p-6 relative group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-neon-500/15 border border-neon-400/30 flex items-center justify-center text-neon-400 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-3xl text-white/10 group-hover:text-neon-400/40 transition-colors">02</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Проверка и подбор</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Проверяем ваш номер на совместимость и подбираем лучший непубличный тариф под ваши задачи.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card rounded-3xl p-6 relative group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-400/30 flex items-center justify-center text-purple-400 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-3xl text-white/10 group-hover:text-purple-400/40 transition-colors">03</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Активация тарифа</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Переводим ваш действующий номер (или оформляем eSIM/SIM) — тариф появляется в вашем официальном личном кабинете оператора.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card rounded-3xl p-6 relative group">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center text-emerald-400 text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-3xl text-white/10 group-hover:text-emerald-400/40 transition-colors">04</span>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-white mb-2">Проверка и связь ∞</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Проверяете новые условия в официальном приложении своего оператора и пользуетесь безлимитной связью без ограничений!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. GUARANTEES & CUSTOMER REVIEWS ==================== -->
+    <section id="guarantees" class="py-16 sm:py-24 relative bg-dark-900/60 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Guarantees Block -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-20">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                        Железные гарантии
+                    </span>
+                    <h2 class="font-display font-bold text-2xl sm:text-4xl text-white leading-tight">
+                        Почему нам доверяют более 4 500 абонентов по всей РФ
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                        Мы подключаем официальные корпоративные и партнерские линейки тарифов напрямую через дилерские шлюзы операторов.
+                    </p>
+                    <div class="pt-2">
+                        <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу увидеть примеры подключенных тарифов в личном кабинете.')" class="inline-flex items-center gap-2 text-sm font-bold text-neon-400 hover:text-white transition-colors">
+                            <span>Запросить скриншоты подключений в WhatsApp</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="glass-card p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Отображение в официальном ЛК</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Тариф и пакеты минут/интернета видны прямо в вашем стандартном приложении Мой МТС, МегаФон, Билайн или T2.
+                        </p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-crimson-500/15 text-crimson-500 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Номер остается оформлен на вас</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Никакого переоформления владельца. Номер полностью сохраняет привязку к вашему паспорту и Госуслугам.
+                        </p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-neon-500/15 text-neon-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Гарантия на весь срок работы</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Предоставляем гарантию сохранности условий тарифа и оперативную техподдержку в мессенджерах без роботов и очередей.
+                        </p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-ruble-sign"></i>
+                        </div>
+                        <h4 class="font-bold text-white text-base">Пополнение обычным способом</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Абонентскую плату вы вносите как обычно — через свой банк по номеру телефона напрямую оператору.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Sub-section -->
+            <div class="space-y-8">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div>
+                        <h3 class="font-display font-bold text-xl sm:text-3xl text-white">Отзывы наших клиентов</h3>
+                        <p class="text-slate-400 text-sm">Реальные истории подключения со смартфонов и роутеров</p>
+                    </div>
+                    <div class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-semibold text-amber-400">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-white ml-1">4.9 / 5.0 (380+ отзывов)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded-lg bg-crimson-500/15 text-crimson-500 text-xs font-bold">Перевод своего номера</span>
+                                <span class="text-xs text-slate-500">Москва</span>
+                            </div>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                «Платил 1100 рублей за 50 ГБ, которые вечно заканчивались из-за раздачи на ноутбук. Ребята за 25 минут подключили непубличный тариф за 290 ₽/мес с полным безлимитом и 1500 минутами. В приложении МегаФон сразу отобразился новый тариф!»
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-white/10">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-crimson-500 to-amber-500 flex items-center justify-center font-bold text-white text-sm">АК</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Александр Ковалев</div>
+                                <div class="text-xs text-emerald-400"><i class="fa-solid fa-check-double"></i> Тариф «Смарт Хит 290»</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded-lg bg-neon-500/15 text-neon-400 text-xs font-bold">Для роутера на дачу</span>
+                                <span class="text-xs text-slate-500">Краснодар</span>
+                            </div>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                «Искал честный безлимит для 4G-модема в частный дом без урезания скорости на торрентах и Smart TV. Оформили новую SIM-карту, скорость 90–120 Мбит/с, за месяц скачали уже больше 800 ГБ — никаких ограничений нет, абонплата копеечная.»
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-white/10">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-neon-500 to-blue-600 flex items-center justify-center font-bold text-white text-sm">ДМ</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Дмитрий Морозов</div>
+                                <div class="text-xs text-emerald-400"><i class="fa-solid fa-check-double"></i> Тариф «Роутер Драйв ∞»</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded-lg bg-purple-500/15 text-purple-400 text-xs font-bold">Подключение всей семьи</span>
+                                <span class="text-xs text-slate-500">Екатеринбург</span>
+                            </div>
+                            <p class="text-sm text-slate-200 leading-relaxed">
+                                «Перевели сразу 3 семейных номера (себе, мужу и ребенку). Сделали приятную скидку за опт. Очень переживала, что слетит привязка к банкам или номер поменяется — но все прошло идеально, даже SIM-карту вынимать не пришлось!»
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3 pt-3 border-t border-white/10">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center font-bold text-white text-sm">ЕС</div>
+                            <div>
+                                <div class="text-sm font-bold text-white">Елена Соколова</div>
+                                <div class="text-xs text-emerald-400"><i class="fa-solid fa-check-double"></i> 3 номера на «Премиум 350»</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 8. FAQ ACCORDION ==================== -->
+    <section id="faq" class="py-16 sm:py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-3">
+                <span class="px-3.5 py-1 rounded-full bg-crimson-500/10 border border-crimson-500/30 text-crimson-500 text-xs font-bold uppercase tracking-wider">
+                    Ответы на вопросы
+                </span>
+                <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                    Часто задаваемые вопросы
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Собрали честные и подробные ответы на главные вопросы перед подключением
+                </p>
+            </div>
+
+            <div class="space-y-3.5" id="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(0)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4">
+                        <span class="font-bold text-base sm:text-lg text-white">Сохранится ли мой действующий номер телефона?</span>
+                        <i id="faq-icon-0" class="fa-solid fa-plus text-crimson-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-0" class="hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                        Да, на 100%! Мы подключаем непубличный тариф прямо на ваш действующий номер и вашу текущую SIM-карту. Менять номер, ходить в салон связи или перепривязывать банковские карты и Госуслуги не нужно. Также по желанию можно оформить новую SIM или виртуальную eSIM.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4">
+                        <span class="font-bold text-base sm:text-lg text-white">Будет ли работать бесплатная раздача интернета (Wi-Fi)?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-plus text-crimson-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                        Да! Во всех представленных тарифах раздача интернета по Wi-Fi, Bluetooth и USB-кабелю полностью бесплатна и не имеет лимитов по гигабайтам. Вы можете спокойно раздавать интернет на ноутбук, планшет, Smart TV или другие смартфоны.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4">
+                        <span class="font-bold text-base sm:text-lg text-white">Официально ли это и не слетит ли тариф?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-plus text-crimson-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                        Абсолютно официально. Это закрытые корпоративные и партнерские тарифные планы самих сотовых операторов, созданные для крупных компаний и удержания абонентов. После активации тариф сразу отображается в вашем официальном мобильном приложении оператора, а номер остается оформленным на ваш паспорт.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4">
+                        <span class="font-bold text-base sm:text-lg text-white">В каких регионах России работают эти тарифы?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-plus text-crimson-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                        Тарифы подключаются для номеров любых регионов РФ и работают в поездках по всей стране без роуминга и доплат на одинаковых условиях. Напишите нам ваш регион в WhatsApp, и мы пришлем актуальную сетку тарифов.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4">
+                        <span class="font-bold text-base sm:text-lg text-white">Почему подключение платное и как оно окупается?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-plus text-crimson-500 transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-5 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+                        Стоимость подключения оплачивается всего <strong>один раз</strong> (за выпуск закрытого промо-кода или перевод номера в VIP-реестр). За счет низкой ежемесячной абонентской платы (от 250 ₽/мес) подключение полностью окупается уже за 2–3 месяца, а дальше вы экономите от 10 000 ₽ ежегодно.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FINAL CTA BANNER & FOOTER ==================== -->
+    <footer class="pt-12 pb-24 sm:pb-16 border-t border-white/10 bg-dark-950 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card-featured rounded-3xl p-8 sm:p-12 mb-12 text-center max-w-4xl mx-auto space-y-6">
+                <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">
+                    Готовы подключить настоящий безлимит уже сегодня?
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+                    Напишите нам прямо сейчас — бесплатно проверим ваш номер и подключим закрытый тариф за 15–30 минут.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                    <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу подключить непубличный безлимитный тариф. Подскажите доступные варианты!')" class="w-full sm:w-auto btn-whatsapp px-8 py-4 rounded-2xl font-display font-bold text-sm sm:text-base text-white flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Написать в WhatsApp</span>
+                    </a>
+                    <a href="#" onclick="openTelegramGeneral(event)" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-sky-500 hover:bg-sky-400 transition-all font-display font-bold text-sm sm:text-base text-white flex items-center justify-center gap-3 shadow-lg shadow-sky-500/30">
+                        <i class="fa-brands fa-telegram text-xl"></i>
+                        <span>Написать в Telegram</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <div class="flex items-center gap-2">
+                    <span class="font-display font-bold text-white">БЕЗЛИМИТ<span class="text-crimson-500">.PRO</span></span>
+                    <span>© 2026 Все права защищены. Сервис подключения корпоративных и партнерских тарифов.</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#tariffs" class="hover:text-slate-300">Тарифы</a>
+                    <a href="#calculator" class="hover:text-slate-300">Калькулятор</a>
+                    <a href="#faq" class="hover:text-slate-300">Вопросы и ответы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== 9. FLOATING QUICK CONTACT WIDGET ==================== -->
+    <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+        <!-- Quick Popup Menu -->
+        <div id="floating-menu" class="hidden flex-col gap-2.5 p-3 rounded-2xl bg-dark-900/95 backdrop-blur-xl border border-white/15 shadow-2xl w-64">
+            <div class="text-xs font-bold text-slate-300 px-2 py-1 border-b border-white/10 flex justify-between items-center">
+                <span>Быстрая связь со специалистом</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            </div>
+            <a href="#" onclick="openWhatsAppGeneral(event, 'Здравствуйте! Пишу с сайта БЕЗЛИМИТ.PRO, помогите подобрать тариф.')" class="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-white text-xs font-semibold transition-all">
+                <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                <div>
+                    <span class="block font-bold">Чат в WhatsApp</span>
+                    <span class="text-[10px] text-slate-400">Ответ за 1–2 минуты</span>
+                </div>
+            </a>
+            <a href="#" onclick="openTelegramGeneral(event)" class="flex items-center gap-3 p-2.5 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 border border-sky-500/30 text-white text-xs font-semibold transition-all">
+                <i class="fa-brands fa-telegram text-sky-400 text-lg"></i>
+                <div>
+                    <span class="block font-bold">Чат в Telegram</span>
+                    <span class="text-[10px] text-slate-400">Онлайн 24/7</span>
+                </div>
+            </a>
+            <button onclick="openLeadModal('Индивидуальный подбор тарифа', 'от 250 ₽/мес', 'от 1 490 ₽')" class="flex items-center gap-3 p-2.5 rounded-xl bg-crimson-500/15 hover:bg-crimson-500/25 border border-crimson-500/30 text-white text-xs font-semibold transition-all text-left">
+                <i class="fa-solid fa-bolt text-crimson-500 text-lg"></i>
+                <div>
+                    <span class="block font-bold">Оставить быструю заявку</span>
+                    <span class="text-[10px] text-slate-400">Перезвоним или напишем</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Main Floating Trigger Button -->
+        <button onclick="toggleFloatingMenu()" class="h-14 px-5 rounded-full btn-whatsapp text-white font-bold text-sm shadow-2xl flex items-center gap-2.5 hover:scale-105 transition-transform">
+            <i id="floating-btn-icon" class="fa-brands fa-whatsapp text-2xl"></i>
+            <span class="hidden sm:inline">Подобрать тариф</span>
+        </button>
+    </div>
+
+    <!-- ==================== MODAL FOR TARIFF ORDER ==================== -->
+    <div id="lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-card-featured rounded-3xl max-w-md w-full p-6 sm:p-8 relative border border-white/20 animate-fadeIn">
+            <button onclick="closeLeadModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="space-y-4">
+                <span class="px-3 py-1 rounded-full bg-crimson-500/20 text-crimson-500 text-xs font-bold uppercase">
+                    Оформление подключения
+                </span>
+                <h3 id="modal-tariff-title" class="font-display font-bold text-xl sm:text-2xl text-white">
+                    Тариф «Смарт Хит 290»
+                </h3>
+
+                <div class="p-3.5 rounded-2xl bg-dark-950/90 border border-white/10 flex justify-between items-center text-xs sm:text-sm">
+                    <div>
+                        <span class="text-slate-400 block">Абонентская плата:</span>
+                        <span id="modal-tariff-monthly" class="font-bold text-neon-400 text-base">290 ₽/мес</span>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-slate-400 block">Разовое подключение:</span>
+                        <span id="modal-tariff-setup" class="font-bold text-white text-base">1 990 ₽</span>
+                    </div>
+                </div>
+
+                <!-- Format Switcher -->
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-2">Как хотите подключить?</label>
+                    <div class="grid grid-cols-2 gap-2" id="modal-format-group">
+                        <button type="button" onclick="selectModalFormat('На свой номер')" id="fmt-own" class="py-2.5 px-3 rounded-xl text-xs font-bold border border-crimson-500 bg-crimson-500/20 text-white">
+                            📱 На свой номер
+                        </button>
+                        <button type="button" onclick="selectModalFormat('Новая SIM / eSIM')" id="fmt-new" class="py-2.5 px-3 rounded-xl text-xs font-semibold border border-white/10 bg-dark-800 text-slate-300">
+                            ⚡ Новая SIM / eSIM
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1.5">Ваш номер телефона (необязательно):</label>
+                    <input id="modal-user-phone" type="tel" placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3 rounded-xl bg-dark-900 border border-white/15 text-sm text-white focus:outline-none focus:border-neon-400">
+                </div>
+
+                <div class="pt-2 space-y-2.5">
+                    <button onclick="submitModalToWhatsApp()" class="w-full py-4 rounded-2xl btn-whatsapp font-display font-bold text-sm text-white flex items-center justify-center gap-2.5">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Отправить заявку в WhatsApp</span>
+                    </button>
+                    <button onclick="submitModalToTelegram()" class="w-full py-3.5 rounded-2xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 font-semibold text-xs sm:text-sm text-sky-300 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-telegram text-lg"></i>
+                        <span>Перейти к оформлению в Telegram</span>
+                    </button>
+                </div>
+
+                <p class="text-[11px] text-slate-400 text-center">
+                    Нажимая кнопку, вы сразу перейдете в диалог с нашим менеджером с уже заполненным названием тарифа.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // 1. Owner Contact State (Loads from localStorage if saved previously)
+        let ownerConfig = {
+            whatsapp: localStorage.getItem('bezlimit_wa') || '79990000000',
+            telegram: localStorage.getItem('bezlimit_tg') || 'bezlimit_pro_support'
+        };
+
+        // Initialize Owner Panel inputs
+        document.getElementById('owner-wa-input').value = ownerConfig.whatsapp;
+        document.getElementById('owner-tg-input').value = ownerConfig.telegram;
+
+        function toggleOwnerPanel() {
+            const panel = document.getElementById('owner-config-panel');
+            panel.classList.toggle('hidden');
+        }
+
+        function saveOwnerConfig() {
+            const rawWa = document.getElementById('owner-wa-input').value.replace(/\D/g, '');
+            const rawTg = document.getElementById('owner-tg-input').value.replace(/^@/, '').trim();
+
+            if (rawWa.length >= 10) {
+                ownerConfig.whatsapp = rawWa;
+                localStorage.setItem('bezlimit_wa', rawWa);
+            }
+            if (rawTg.length > 0) {
+                ownerConfig.telegram = rawTg;
+                localStorage.setItem('bezlimit_tg', rawTg);
+            }
+
+            const statusEl = document.getElementById('owner-save-status');
+            statusEl.classList.remove('hidden');
+            setTimeout(() => {
+                statusEl.classList.add('hidden');
+            }, 3500);
+        }
+
+        // Helper functions to open WhatsApp & Telegram with dynamic message
+        function openWhatsAppGeneral(event, messageText) {
+            if (event) event.preventDefault();
+            const encoded = encodeURIComponent(messageText);
+            const url = `https://wa.me/${ownerConfig.whatsapp}?text=${encoded}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        function openTelegramGeneral(event) {
+            if (event) event.preventDefault();
+            const url = `https://t.me/${ownerConfig.telegram}`;
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+
+        // 2. Tariffs Database (6 Detailed Exclusive Tariffs)
+        const tariffsData = [
+            {
+                id: 1,
+                category: 'smartphone',
+                badge: 'ХИТ ПРОДАЖ',
+                badgeColor: 'bg-crimson-500 text-white',
+                operatorTag: 'МегаФон / МТС / T2 / Билайн',
+                name: 'Смарт Безлимит ХИТ',
+                internet: 'Полный безлимит ∞',
+                minutes: '1 200 минут по РФ',
+                sms: '300 SMS в пакете',
+                tethering: 'Бесплатная раздача Wi-Fi',
+                extra: 'Перенос на свой номер за 20 мин',
+                oldPrice: '990 ₽',
+                monthlyPrice: '290 ₽',
+                setupPrice: '1 990 ₽',
+                featured: true
+            },
+            {
+                id: 2,
+                category: 'smartphone',
+                badge: 'МИНИМАЛЬНАЯ АБОНПЛАТА',
+                badgeColor: 'bg-neon-500 text-dark-950',
+                operatorTag: 'На свой номер или eSIM',
+                name: 'Лайт Анлим 250',
+                internet: 'Полный безлимит ∞',
+                minutes: '600 минут по РФ',
+                sms: '100 SMS в пакете',
+                tethering: 'Бесплатная раздача Wi-Fi',
+                extra: 'Безлимит на мессенджеры и соцсети',
+                oldPrice: '850 ₽',
+                monthlyPrice: '250 ₽',
+                setupPrice: '1 790 ₽',
+                featured: false
+            },
+            {
+                id: 3,
+                category: 'modem',
+                badge: 'ДЛЯ РОУТЕРА И ДАЧИ',
+                badgeColor: 'bg-emerald-500 text-dark-950',
+                operatorTag: 'Любые 4G/5G модемы и роутеры',
+                name: 'Роутер Драйв ∞ (Без капов)',
+                internet: 'Полный безлимит ∞',
+                minutes: 'Без пакета минут (Интернет-тариф)',
+                sms: 'Поддержка торрентов 24/7',
+                tethering: 'Раздача на 32 устройства без прошивки',
+                extra: 'Скорость до 150 Мбит/с без ограничений',
+                oldPrice: '1 350 ₽',
+                monthlyPrice: '390 ₽',
+                setupPrice: '2 200 ₽',
+                featured: false
+            },
+            {
+                id: 4,
+                category: 'max',
+                badge: 'VIP ПРЕМИУМ',
+                badgeColor: 'bg-amber-400 text-dark-950',
+                operatorTag: 'Корпоративная линейка',
+                name: 'Ультра Бизнес 3000',
+                internet: 'Полный безлимит ∞',
+                minutes: '3 000 минут по всей РФ',
+                sms: '1 000 SMS в пакете',
+                tethering: 'Бесплатная раздача Wi-Fi + Модем',
+                extra: 'Приоритет скорости на базовой станции',
+                oldPrice: '1 800 ₽',
+                monthlyPrice: '490 ₽',
+                setupPrice: '2 490 ₽',
+                featured: true
+            },
+            {
+                id: 5,
+                category: 'max',
+                badge: 'ОПТИМАЛЬНЫЙ',
+                badgeColor: 'bg-purple-500 text-white',
+                operatorTag: 'Перевод действующего номера',
+                name: 'Комфорт Плюс 2000',
+                internet: 'Полный безлимит ∞',
+                minutes: '2 000 минут по РФ',
+                sms: '500 SMS в пакете',
+                tethering: 'Бесплатная раздача Wi-Fi',
+                extra: 'Звонки внутри сети не расходуют пакет',
+                oldPrice: '1 250 ₽',
+                monthlyPrice: '350 ₽',
+                setupPrice: '2 190 ₽',
+                featured: false
+            },
+            {
+                id: 6,
+                category: 'modem',
+                badge: 'МОМЕНТАЛЬНАЯ eSIM',
+                badgeColor: 'bg-sky-400 text-dark-950',
+                operatorTag: 'Готовый QR-код за 10 минут',
+                name: 'Форсаж Онлайн + Планшет',
+                internet: 'Полный безлимит ∞',
+                minutes: '800 минут + Интернет в роутер',
+                sms: '200 SMS в пакете',
+                tethering: 'Работает в смартфонах и роутерах',
+                extra: 'Оформление на новую SIM или eSIM',
+                oldPrice: '1 100 ₽',
+                monthlyPrice: '330 ₽',
+                setupPrice: '1 690 ₽',
+                featured: false
+            }
+        ];
+
+        function renderTariffs(filter = 'all') {
+            const grid = document.getElementById('tariffs-grid');
+            const filtered = filter === 'all' ? tariffsData : tariffsData.filter(t => t.category === filter);
+
+            grid.innerHTML = filtered.map(tariff => `
+                <div class="${tariff.featured ? 'glass-card-featured' : 'glass-card'} rounded-3xl p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <!-- Top Row Badges -->
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider ${tariff.badgeColor}">
+                                ${tariff.badge}
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">${tariff.operatorTag}</span>
+                        </div>
+
+                        <!-- Tariff Title -->
+                        <h3 class="font-display font-bold text-xl text-white mb-5">${tariff.name}</h3>
+
+                        <!-- Features List -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 p-3 rounded-2xl bg-white/5 border border-white/5">
+                                <div class="w-9 h-9 rounded-xl bg-crimson-500/20 text-crimson-500 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-infinity"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block">Мобильный интернет</span>
+                                    <span class="font-bold text-sm sm:text-base text-white">${tariff.internet}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 px-2 py-1 text-sm text-slate-200">
+                                <i class="fa-solid fa-phone-volume text-neon-400 w-5 text-center"></i>
+                                <span>${tariff.minutes}</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 px-2 py-1 text-sm text-slate-200">
+                                <i class="fa-solid fa-wifi text-emerald-400 w-5 text-center"></i>
+                                <span>${tariff.tethering}</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 px-2 py-1 text-sm text-slate-200">
+                                <i class="fa-solid fa-envelope text-purple-400 w-5 text-center"></i>
+                                <span>${tariff.sms}</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 px-2 py-1 text-xs text-slate-400">
+                                <i class="fa-solid fa-circle-check text-amber-400 w-5 text-center"></i>
+                                <span>${tariff.extra}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing & CTA Footer -->
+                    <div class="pt-5 border-t border-white/10 space-y-4">
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Абонентская плата:</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="font-display font-extrabold text-2xl sm:text-3xl text-white">${tariff.monthlyPrice}</span>
+                                    <span class="text-xs text-slate-400">/мес</span>
+                                    <span class="text-xs text-slate-500 line-through">${tariff.oldPrice}</span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-[11px] text-slate-400 block">Подключение:</span>
+                                <span class="font-bold text-sm text-neon-400">${tariff.setupPrice}</span>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-2">
+                            <button onclick="openLeadModal('${tariff.name}', '${tariff.monthlyPrice}/мес', '${tariff.setupPrice}')" class="flex-1 py-3.5 px-4 rounded-2xl btn-crimson font-display font-bold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                                <span>Подключить этот тариф</span>
+                                <i class="fa-solid fa-bolt"></i>
+                            </button>
+                            <button onclick="openWhatsAppGeneral(event, 'Здравствуйте! Хочу подключить тариф «${tariff.name}» (абонплата ${tariff.monthlyPrice}/мес).')" class="w-12 rounded-2xl btn-whatsapp text-white flex items-center justify-center text-lg" title="Быстрый заказ в WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterTariffs(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.className = 'filter-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-gradient-to-r from-crimson-500 to-rose-600 text-white shadow-lg shadow-crimson-500/30';
+                } else {
+                    btn.className = 'filter-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-dark-800 border border-white/10 text-slate-300 hover:text-white hover:border-white/30';
+                }
+            });
+            renderTariffs(category);
+        }
+
+        // 3. Interactive Savings Calculator Logic
+        let currentSimCount = 2;
+        const baseTariffMonthly = 290;
+
+        function setSimCount(count) {
+            currentSimCount = count;
+            const buttons = document.querySelectorAll('.sim-btn');
+            buttons.forEach(btn => {
+                if (parseInt(btn.dataset.sim) === count) {
+                    btn.className = 'sim-btn py-3 rounded-xl font-display font-bold text-sm bg-gradient-to-r from-crimson-500 to-rose-600 text-white border border-crimson-500 shadow-lg shadow-crimson-500/30 transition-all';
+                } else {
+                    btn.className = 'sim-btn py-3 rounded-xl font-display font-bold text-sm bg-dark-800 border border-white/10 text-slate-300 hover:border-white/30 transition-all';
+                }
+            });
+            const words = ['1 номер', '2 номера', '3 номера', '4 номера', '5 номеров'];
+            document.getElementById('calc-sims-label').textContent = words[count - 1];
+            updateCalculator();
+        }
+
+        function updateCalculator() {
+            const spendPerSim = parseInt(document.getElementById('calc-spend').value);
+            document.getElementById('calc-spend-val').textContent = spendPerSim.toLocaleString('ru-RU');
+
+            const oldMonthlyTotal = spendPerSim * currentSimCount;
+            const newMonthlyTotal = baseTariffMonthly * currentSimCount;
+            const monthlyDiff = Math.max(0, oldMonthlyTotal - newMonthlyTotal);
+
+            const save1Year = monthlyDiff * 12;
+            const save3Years = monthlyDiff * 36;
+
+            document.getElementById('calc-old-month').textContent = oldMonthlyTotal.toLocaleString('ru-RU');
+            document.getElementById('calc-new-month').textContent = newMonthlyTotal.toLocaleString('ru-RU');
+            document.getElementById('calc-save-1y').textContent = save1Year.toLocaleString('ru-RU');
+            document.getElementById('calc-save-3y').textContent = save3Years.toLocaleString('ru-RU');
+        }
+
+        function sendCalcToWhatsApp() {
+            const spendPerSim = document.getElementById('calc-spend').value;
+            const save1Year = document.getElementById('calc-save-1y').textContent;
+            const msg = `Здравствуйте! Посчитал выгоду в калькуляторе на вашем сайте: сейчас плачу по ${spendPerSim} ₽/мес, хочу перевести номеров: ${currentSimCount} шт. (экономия ${save1Year} ₽ в год). Подскажите доступные тарифы!`;
+            openWhatsAppGeneral(null, msg);
+        }
+
+        // 4. Modal & Order Logic
+        let selectedTariffName = '';
+        let selectedTariffMonthly = '';
+        let selectedFormat = 'На свой номер';
+
+        function openLeadModal(name, monthly, setup) {
+            selectedTariffName = name;
+            selectedTariffMonthly = monthly;
+            document.getElementById('modal-tariff-title').textContent = `Тариф «${name}»`;
+            document.getElementById('modal-tariff-monthly').textContent = monthly;
+            document.getElementById('modal-tariff-setup').textContent = setup;
+
+            const modal = document.getElementById('lead-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLeadModal() {
+            const modal = document.getElementById('lead-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function selectModalFormat(fmt) {
+            selectedFormat = fmt;
+            const ownBtn = document.getElementById('fmt-own');
+            const newBtn = document.getElementById('fmt-new');
+            if (fmt === 'На свой номер') {
+                ownBtn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold border border-crimson-500 bg-crimson-500/20 text-white';
+                newBtn.className = 'py-2.5 px-3 rounded-xl text-xs font-semibold border border-white/10 bg-dark-800 text-slate-300';
+            } else {
+                newBtn.className = 'py-2.5 px-3 rounded-xl text-xs font-bold border border-crimson-500 bg-crimson-500/20 text-white';
+                ownBtn.className = 'py-2.5 px-3 rounded-xl text-xs font-semibold border border-white/10 bg-dark-800 text-slate-300';
+            }
+        }
+
+        function submitModalToWhatsApp() {
+            const userPhone = document.getElementById('modal-user-phone').value.trim();
+            const phonePart = userPhone ? `, мой номер: ${userPhone}` : '';
+            const msg = `Здравствуйте! Хочу подключить «${selectedTariffName}» (${selectedTariffMonthly}). Формат: ${selectedFormat}${phonePart}. Расскажите, как подключить!`;
+            openWhatsAppGeneral(null, msg);
+            closeLeadModal();
+        }
+
+        function submitModalToTelegram() {
+            openTelegramGeneral(null);
+            closeLeadModal();
+        }
+
+        // 5. FAQ Accordion Logic
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            const isHidden = content.classList.contains('hidden');
+
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-45');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-45');
+            }
+        }
+
+        // 6. Mobile Menu & Floating Widget Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('mobile-menu-icon');
+            menu.classList.toggle('hidden');
+            icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars text-lg' : 'fa-solid fa-xmark text-lg';
+        }
+
+        function toggleFloatingMenu() {
+            const menu = document.getElementById('floating-menu');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        }
+
+        // Initialize page on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTariffs('all');
+            updateCalculator();
+        });
+    </script>
+</body>
+</html>
