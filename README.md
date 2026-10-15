@@ -1,2 +1,0 @@
-# tarifonlin.ru
-tarifonlin
